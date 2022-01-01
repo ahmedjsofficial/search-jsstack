@@ -1,0 +1,297 @@
+.home_nav_item,
+.home_nav_img,
+.man_searching {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+/* Global CSS --- */
+.home_nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  top: 3vh;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: 1700;
+  width: 75vw;
+  height: auto;
+  margin: 0 auto;
+}
+.home_nav .home_nav_item {
+  cursor: pointer;
+  color: #fff;
+  padding: 0.5rem 0.7rem;
+  margin: 0 0.1rem;
+  border-radius: 0.5rem;
+  transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+}
+.home_nav .home_nav_item:hover {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: rgb(31 47 71 / 25%) 0px 20px 40px, rgb(0 0 0 / 10%) 0px 1px 5px,
+    rgb(255 255 255 / 40%) 0px 0px 0px 0.5px inset;
+}
+.home_nav .home_nav_img span img {
+  width: 41px !important;
+  height: 41px !important;
+  object-fit: cover !important;
+  border-radius: 2rem;
+}
+.home_nav .home_nav_item .svg_icon {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/*  */
+.home_wrap{
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: 1500;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+
+  height: 100vh;
+  width: 75vw;
+  margin: 0 auto;
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.home_wrap::-webkit-scrollbar{
+  display: none;
+}
+
+
+/* search_dashboard */
+.search_dashboard {
+  width: auto;
+  margin: 5vh auto 5vh auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  border-bottom: 0.15rem solid #f2f6ff;
+  background: rgba(116, 0, 248, 0.1);
+  /* background: rgba(18,246,246,0.2); */
+  backdrop-filter: blur(0.5rem);
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 0px 0.5px inset;
+}
+.man_searching .js_title {
+  color: #ccc;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.search_from {
+  margin-top: 1rem;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.search_button {
+  cursor: pointer;
+  position: absolute;
+  top: 0.55rem;
+  left: 0.5rem;
+  display: flex;
+  opacity: 1;
+  z-index: 1700;
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+}
+.search_button:hover {
+  transform: translateX(2px);
+}
+.search_input {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  z-index: 1500;
+  outline: none;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  font-size: 13px;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: rgba(249, 249, 249, 1);
+  padding: 0.73rem 3rem 0.73rem 2.5rem;
+  backdrop-filter: blur(0.5rem);
+  border: 1px solid rgba(249, 249, 249, 0.1);
+  background: linear-gradient(
+    rgba(99, 106, 150, 0.5) 0%,
+    rgba(182, 186, 214, 0.5) 100%
+  );
+}
+.search_from .search_input::placeholder {
+  color: rgba(249, 249, 249, 0.7);
+}
+.search_from .search_input:focus {
+  background: linear-gradient(
+    rgba(24, 32, 79, 0.4) 0%,
+    rgba(24, 32, 79, 0.25) 100%
+  );
+  box-shadow: rgb(47 184 255 / 30%) 0px 10px 40px,
+    rgb(47 184 255) 0px 0px 0px 1px inset;
+}
+.search_from .js_input_mic {
+  position: absolute;
+  top: 0.47rem;
+  right: 0.7rem;
+  display: flex;
+  opacity: 1;
+  z-index: 1700;
+}
+.js_input_mic .mic_svg {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  fill: rgba(25, 0, 255, 0.1);
+  stroke: rgba(249, 249, 249, 0.8);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+}
+.js_input_mic .mic_svg:hover {
+  stroke-width: 2;
+  fill: rgba(25, 0, 255, 0.5);
+  stroke: rgba(249, 249, 249, 1);
+}
+/* OFFERED btn_group */
+.btn_group {
+  margin: 1.5rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_group .btn_js {
+  margin: 0 1rem;
+  font-size: 0.9rem;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 0.55rem 2rem;
+  position: relative;
+  border: none;
+  box-shadow: rgb(147 231 221 / 15%) 0px 20px 40px;
+  background: linear-gradient(
+    91.4deg,
+    rgb(47, 184, 255) 0%,
+    rgb(158, 236, 217) 100%
+  );
+  transition: all 200ms cubic-bezier(0.55, 0.085, 0.68, 0.53) 0s;
+}
+.btn_group .btn_js:hover {
+  transform: translateY(-2px);
+}
+/* google_offer */
+.offered_title {
+  color: #eee;
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+.google_offer .quick_links_group {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1vh;
+}
+.quick_links_group .quick_links_icon {
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+.quick_links_group .quick_links_icon:hover {
+  transform: scale(1.1);
+}
+
+.btn_group .btn_js:active {
+  transform: scale(0.9);
+}
+.quick_links_group .quick_links_icon:active {
+  transform: scale(0.9);
+}
+.search_button:active {
+  transform: scale(0.8);
+}
+.js_input_mic .mic_svg:active {
+  transform: scale(0.8);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+  .man_searching .js_title {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .home_nav,
+  .home_wrap{
+    width: 95vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .man_searching span img {
+    height: 200px !important;
+    width: 250px !important;
+  }
+  .footer_title {
+    font-size: 1.4rem;
+  }
+  .app_available span img {
+    width: 7rem !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+  .btn_group {
+    margin: 1rem 0;
+    justify-content: space-between;
+  }
+  .btn_group .btn_js {
+    font-size: 0.8rem;
+    margin: 0 0.2rem;
+  }
+  .quick_links_group .quick_links_icon {
+    margin: 0 0.2rem;
+  }
+  .app_footer {
+    padding: 1rem 0 1.5rem 0;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .copyright {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .btn_group .btn_js {
+    font-size: 0.75rem;
+    margin: 0 0.2rem;
+    padding: 0.55rem 1rem;
+  }
+}
+@media screen and (max-width: 325px){
+  .home_nav{
+    margin-bottom: 5vh;
+  }
+}
+
